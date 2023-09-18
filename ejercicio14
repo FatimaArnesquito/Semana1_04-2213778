@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class MinutosHastaFinDeSemana {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Introduce un día de la semana (1 = Lunes, 2 = Martes, ..., 5 = Viernes): ");
+        int diaSemana = scanner.nextInt();
+        
+        System.out.print("Introduce la hora (formato 24 horas): ");
+        int horas = scanner.nextInt();
+        
+        System.out.print("Introduce los minutos: ");
+        int minutos = scanner.nextInt();
+        
+        int minutosHastaFinDeSemana = 0;
+        
+        if (diaSemana <= 4) { // Días de lunes a jueves
+            minutosHastaFinDeSemana = (4 - diaSemana) * 24 * 60 + (15 - horas) * 60 + (0 - minutos);
+        } else if (diaSemana == 5) { // Viernes
+            if (horas < 15) {
+                minutosHastaFinDeSemana = (15 - horas) * 60 + (0 - minutos);
+            }
+        }
+        
+        System.out.println("Minutos hasta el fin de semana: " + minutosHastaFinDeSemana + " minutos");
+    }
+}
