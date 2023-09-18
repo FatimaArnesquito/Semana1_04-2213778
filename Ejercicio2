@@ -1,0 +1,11 @@
+public class DatosPersonales {
+    public static void main(String[] args) {
+        String nombre = "Tu Nombre";
+        String direccion = "Tu Dirección";
+        String telefono = "Tu Teléfono";
+        
+        System.out.println("Nombre: " + nombre);
+        System.out.println("Dirección: " + direccion);
+        System.out.println("Teléfono: " + telefono);
+    }
+}
