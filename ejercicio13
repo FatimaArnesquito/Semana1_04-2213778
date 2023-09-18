@@ -1,0 +1,14 @@
+import java.util.Scanner;
+
+public class ContarDigitos {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Introduce un número entero (positivo o negativo) de hasta 5 dígitos: ");
+        int numero = scanner.nextInt();
+        
+        int digitos = String.valueOf(Math.abs(numero)).length();
+        
+        System.out.println("El número tiene " + digitos + " dígitos.");
+    }
+}
