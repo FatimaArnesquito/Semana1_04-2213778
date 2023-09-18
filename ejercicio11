@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class SegundosHastaMedianoche {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Introduce la hora (0-23): ");
+        int horas = scanner.nextInt();
+        
+        System.out.print("Introduce los minutos (0-59): ");
+        int minutos = scanner.nextInt();
+        
+        int segundosHastaMedianoche = (23 - horas) * 3600 + (59 - minutos) * 60;
+        
+        System.out.println("Segundos hasta la medianoche: " + segundosHastaMedianoche + " segundos");
+    }
+}
