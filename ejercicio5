@@ -1,0 +1,9 @@
+public class CalculoSalario {
+    public static void main(String[] args) {
+        int horasTrabajadas = 40; // Cambia este valor según las horas trabajadas
+        double salarioPorHora = 12.0;
+        double salarioSemanal = horasTrabajadas * salarioPorHora;
+        
+        System.out.println("Salario semanal: " + salarioSemanal + " euros");
+    }
+}
