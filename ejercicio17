@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class MediaImparesMayorPares {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        int numerosIntroducidos = 0;
+        int sumaImpares = 0;
+        int mayorPar = Integer.MIN_VALUE;
+        
+        while (true) {
+            System.out.print("Introduce un número (negativo para salir): ");
+            int numero = scanner.nextInt();
+            
+            if (numero < 0) {
+                break; // Salir del bucle si se introduce un número negativo
+            }
+            
+            numerosIntroducidos++;
+            
+            if (numero % 2 != 0) { // Si es impar
+                sumaImpares += numero;
+            } else { // Si es par
+                if (numero > mayorPar) {
+                    mayorPar = numero;
+                }
+            }
+        }
+        
+        if (numerosIntroducidos > 0) {
+            double mediaImpares = (double) sumaImpares / numerosIntroducidos;
+            System.out.println("Números introducidos: " + numerosIntroducidos);
+            System.out.println("Media de impares: " + mediaImpares);
+            System.out.println("Mayor de los pares: " + mayorPar);
+        } else {
+            System.out.println("No se introdujeron números.");
+        }
+    }
+}
