@@ -1,0 +1,8 @@
+public class ConversorEurosPesetas {
+    public static void main(String[] args) {
+        double euros = 100.0; // Cambia este valor según lo que quieras convertir
+        double pesetas = euros * 166.386;
+        
+        System.out.println(euros + " euros son " + pesetas + " pesetas.");
+    }
+}
