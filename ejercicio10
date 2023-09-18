@@ -1,0 +1,18 @@
+import java.util.Scanner;
+import java.lang.Math;
+
+public class CalculoTiempoDeCaida {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Gravedad en m/s^2
+        double g = 9.81;
+        
+        System.out.print("Introduce la altura desde la que cae el objeto (en metros): ");
+        double h = scanner.nextDouble();
+        
+        // Calcula el tiempo de caída usando la fórmula T = sqrt(2h / g)
+        double tiempoDeCaida = Math.sqrt((2 * h) / g);
+        
+        System.out.println("El tiempo que tardará en caer el objeto es: " + tiempoDeCaida + " segundos");
+    }
