@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+public class DigitosParesYSuma {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Introduce un número entero: ");
+        long numero = scanner.nextLong();
+        
+        long numeroAbsoluto = Math.abs(numero); // Tomamos el valor absoluto para manejar números negativos
+        
+        String numeroComoString = String.valueOf(numeroAbsoluto);
+        int longitud = numeroComoString.length();
+        
+        long sumaDigitosPares = 0;
+        boolean hayDigitosPares = false;
+        
+        System.out.print("Dígitos pares: ");
+        
+        for (int i = 0; i < longitud; i++) {
+            char digitoChar = numeroComoString.charAt(i);
+            int digito = Character.getNumericValue(digitoChar);
+            
+            if (digito % 2 == 0) {
+                System.out.print(digito + " ");
+                sumaDigitosPares += digito;
+                hayDigitosPares = true;
+            }
+        }
+        
+        if (hayDigitosPares) {
+            System.out.println("\nSuma de los dígitos pares: " + sumaDigitosPares);
+        } else {
+            System.out.println("\nNo hay dígitos pares en el número.");
+        }
+    }
+}
