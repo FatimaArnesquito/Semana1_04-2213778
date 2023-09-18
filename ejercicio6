@@ -1,0 +1,8 @@
+public class ConversorMbKb {
+    public static void main(String[] args) {
+        double megabytes = 5.0; // Cambia este valor según los megabytes a convertir
+        double kilobytes = megabytes * 1024;
+        
+        System.out.println(megabytes + " Mb son " + kilobytes + " Kb");
+    }
+}
