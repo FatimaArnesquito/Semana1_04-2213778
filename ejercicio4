@@ -1,0 +1,8 @@
+public class ConversorSolesEuros {
+    public static void main(String[] args) {
+        double soles = 100.0; // Cambia este valor según lo que quieras convertir
+        double euros = soles / 4.0; // Suponiendo que 1 euro equivale a 4 soles
+        
+        System.out.println(soles + " soles son " + euros + " euros.");
+    }
+}
