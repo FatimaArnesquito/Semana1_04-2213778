@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class CalculadoraNota {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Introduce la nota del primer examen: ");
+        double nota1 = scanner.nextDouble();
+        
+        System.out.print("Introduce la media deseada: ");
+        double mediaDeseada = scanner.nextDouble();
+        
+        // La nota del segundo examen se calcula para alcanzar la media deseada
+        // Nota final = 0.4 * nota1 + 0.6 * nota2
+        // nota2 = (mediaDeseada - 0.4 * nota1) / 0.6
+        double nota2 = (mediaDeseada - 0.4 * nota1) / 0.6;
+        
+        System.out.println("Necesitas sacar un " + nota2 + " en el segundo examen para alcanzar la media deseada.");
+    }
+}
