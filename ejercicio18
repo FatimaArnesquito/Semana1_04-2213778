@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class NumerosMenoresNoDivisibles {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Introduce un número entero: ");
+        int limite = scanner.nextInt();
+        
+        System.out.print("Introduce otro número entero (no divisible por el primero): ");
+        int noDivisible = scanner.nextInt();
+        
+        for (int i = 1; i < limite; i++) {
+            if (i % noDivisible != 0) {
+                System.out.print(i + " ");
+            }
+        }
+    }
+}
