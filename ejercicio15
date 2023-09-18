@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class ControlDeCajaFuerte {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int combinacion = 1234; // Combinación de la caja fuerte
+        int intentos = 4; // Número de intentos
+        
+        while (intentos > 0) {
+            System.out.print("Introduce la combinación (4 cifras): ");
+            int intento = scanner.nextInt();
+            
+            if (intento == combinacion) {
+                System.out.println("La caja fuerte se ha abierto satisfactoriamente.");
+                break; // Sal del bucle si la combinación es correcta
+            } else {
+                System.out.println("Lo siento, esa no es la combinación.");
+                intentos--;
+                if (intentos > 0) {
+                    System.out.println("Te quedan " + intentos + " intentos.");
+                } else {
+                    System.out.println("Te has quedado sin intentos.");
+                }
+            }
+        }
+    }
+}
